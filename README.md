@@ -1,7 +1,7 @@
 ## babel-plugin-atom-demand
 
-[![NPM version](https://img.shields.io/npm/v/babel-plugin-import-demand.svg?style=flat)](https://npmjs.org/package/babel-plugin-import-demand)
-[![NPM downloads](http://img.shields.io/npm/dm/babel-plugin-import-demand.svg?style=flat)](https://npmjs.org/package/babel-plugin-import-demand)
+[![NPM version](https://img.shields.io/npm/v/babel-plugin-atom-demand.svg?style=flat)](https://npmjs.org/package/babel-plugin-atom-demand)
+[![NPM downloads](http://img.shields.io/npm/dm/babel-plugin-atom-demand.svg?style=flat)](https://npmjs.org/package/babel-plugin-atom-demand)
 
 ## Example
 
@@ -14,7 +14,7 @@ import { Button } from 'vue-atom-ui';
 (roughly) to
 
 ```javascript
-var _button = require('vue-atom-ui/lib/button');
+var _button = require('vue-atom-ui/lib/Button');
 
 var _button2 = _interopRequireDefault(_button);
 
