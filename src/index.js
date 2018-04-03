@@ -1,13 +1,14 @@
 const ImportAstPlugin = (t, path) => {
   if (path.node && path.node.source.value === "vue-atom-ui") {
-    path.node.specifiers.forEach(({type, imported, local}) => {
+
+    path.node.specifiers.forEach(({type, local}) => {
       if (type === 'ImportSpecifier') {
         path.insertBefore(
           t.importDeclaration(
             [ t.importDefaultSpecifier(
-                t.identifier(imported.name)
+                t.identifier(local.name)
             )],
-            t.stringLiteral(`vue-atom-ui/lib/${imported.name}`)
+            t.stringLiteral(`vue-atom-ui/lib/${local.name}`)
           )
         );
         // TODO
@@ -20,6 +21,15 @@ const ImportAstPlugin = (t, path) => {
         //     )
         //   );
         // }
+      } else if (type === 'ImportDefaultSpecifier') {
+        path.insertBefore(
+          t.importDeclaration(
+            [ t.importDefaultSpecifier(
+                t.identifier(local.name)
+            )],
+            t.stringLiteral(`vue-atom-ui/lib/${local.name}`)
+          )
+        );
       }
     });
     path.remove();
