@@ -14,17 +14,21 @@ babel plugin for import vue-atom-ui on demand
 Converts
 
 ```javascript
+import Atom from 'vue-atom-ui';
 import { Button } from 'vue-atom-ui';
 ```
 
 (roughly) to
 
 ```javascript
+var _atom = require('vue-atom-ui/lib/Atom');
+
+var _atom2 = _interopRequireDefault(_atom);
+
 var _button = require('vue-atom-ui/lib/Button');
 
 var _button2 = _interopRequireDefault(_button);
 
-// TODO
 require('vue-atom-ui/lib/css/button.css');
 ```
 
