@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-atom-demand",
-  "version": "0.0.1-beta.2",
+  "version": "0.1.0",
   "description": "babel plugin for import atom on demand",
   "main": "lib/index.js",
   "scripts": {

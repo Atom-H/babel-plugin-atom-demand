@@ -1,6 +1,5 @@
 const ImportAstPlugin = (t, path) => {
   if (path.node && path.node.source.value === "vue-atom-ui") {
-
     path.node.specifiers.forEach(({type, local}) => {
       if (type === 'ImportSpecifier') {
         path.insertBefore(

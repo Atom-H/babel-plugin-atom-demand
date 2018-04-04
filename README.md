@@ -3,6 +3,12 @@
 [![NPM version](https://img.shields.io/npm/v/babel-plugin-atom-demand.svg?style=flat)](https://npmjs.org/package/babel-plugin-atom-demand)
 [![NPM downloads](http://img.shields.io/npm/dm/babel-plugin-atom-demand.svg?style=flat)](https://npmjs.org/package/babel-plugin-atom-demand)
 
+babel plugin for import vue-atom-ui on demand
+
+## Install
+
+[![babel-plugin-atom-demand](https://nodei.co/npm/babel-plugin-atom-demand.png)](https://npmjs.org/package/babel-plugin-atom-demand)
+
 ## Example
 
 Converts
@@ -18,7 +24,7 @@ var _button = require('vue-atom-ui/lib/Button');
 
 var _button2 = _interopRequireDefault(_button);
 
-// 待完善
+// TODO
 require('vue-atom-ui/lib/css/button.css');
 ```
 
